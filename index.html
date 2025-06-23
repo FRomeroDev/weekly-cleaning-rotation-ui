@@ -2,45 +2,49 @@
 <html>
 
 <head>
-    <title>Weekly cleaning</title>
+    <title>Weekly Cleaning</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        html {
+            font-size: 1rem;
+        }
+
         body {
             font-family: sans-serif;
             text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 1.25rem;
             background-color: #f9f9f9;
         }
 
         h1 {
-            margin-bottom: 20px;
+            margin-bottom: 2.375rem;
+            margin-top: 1.875rem;
         }
 
         .circle {
             position: relative;
             width: 90vw;
-            max-width: 360px;
             height: 90vw;
-            max-height: 360px;
-            margin: 20px auto;
+            max-height: 22.5rem;
+            margin: 3.125rem auto 0;
             border-radius: 50%;
             background: #fffffff7;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.375rem 1.5rem 0rem, rgba(0, 0, 0, 0.08) 0rem 0rem 0rem 0.0625rem;
         }
 
         .person {
             position: absolute;
-            width: 50px;
-            height: 30px;
-            margin: -15px 0 0 -25px;
+            width: 3.125rem;
+            height: 1.875rem;
+            margin: -0.9375rem 0 0 -1.5625rem;
             text-align: center;
             background: white;
-            border: 0.5px solid rgb(229, 230, 236);
-            line-height: 30px;
-            border-radius: 40px;
-            font-size: 14px;
+            border: 0.03125rem solid rgb(229, 230, 236);
+            line-height: 1.875rem;
+            border-radius: 2.5rem;
+            font-size: 0.875rem;
         }
 
         .highlight {
@@ -52,54 +56,53 @@
         .date-label {
             position: absolute;
             text-align: center;
-            font-size: 12px;
-            margin-left: -30px;
+            font-size: 0.75rem;
+            margin-left: -1.875rem;
         }
 
         .legend {
-            margin-top: 30px;
-            font-size: 14px;
+            margin-top: 1.875rem;
+            font-size: 0.875rem;
             text-align: left;
-            max-width: 300px;
+            max-width: 18.75rem;
             margin-left: auto;
             margin-right: auto;
             background: #fff;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            padding: 0.625rem;
+            border-radius: 0.5rem;
+            box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.375rem 1.5rem 0rem, rgba(0, 0, 0, 0.08) 0rem 0rem 0rem 0.0625rem;
         }
 
-        .dropdown-toggle {
-            font-size: 13px;
-            margin-top: 15px;
-        }
-
-        .title-style {
-            font-size: 24px !important;
-            margin-bottom: 10px;
-            padding-top: 20px;
-            color: #333;
-            font-weight: 900;
+        .form-check {
+            text-align: left;
         }
     </style>
 </head>
 
 <body>
-    <h2 class="title-style">Weekly cleaning routine</h2>
-    <div class="dropdown mb-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Select people
-        </button>
-        <ul class="dropdown-menu" id="dropdown-menu">
-            <li><a class="dropdown-item" href="#" onclick="setPersonCount(1)">1</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setPersonCount(2)">2</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setPersonCount(3)">3</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setPersonCount(4)">4</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setPersonCount(5)">5</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setPersonCount(6)">6</a></li>
-            <li><a class="dropdown-item" href="#" onclick="setPersonCount(7)">7</a></li>
-        </ul>
-    </div>
+    <h1>Weekly order</h1>
+    <form id="personForm" class="mb-3">
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="P1" id="P1" checked><label
+                    class="form-check-label" for="P1">P1</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="P2" id="P2" checked><label
+                    class="form-check-label" for="P2">P2</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="P3" id="P3" checked><label
+                    class="form-check-label" for="P3">P3</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="P4" id="P4" checked><label
+                    class="form-check-label" for="P4">P4</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="P5" id="P5" checked><label
+                    class="form-check-label" for="P5">P5</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="P6" id="P6" checked><label
+                    class="form-check-label" for="P6">P6</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" value="P7" id="P7" checked><label
+                    class="form-check-label" for="P7">P7</label></div>
+        </div>
+        <div class="mt-3">
+            <label for="overridePerson" class="form-label">Assigned person</label>
+            <select id="overridePerson" class="form-select form-select-sm" onchange="drawCircle()"></select>
+        </div>
+    </form>
 
     <div class="circle" id="circle"></div>
 
@@ -108,7 +111,7 @@
         P1, P2 → BR 1<br>
         P3, P4 → BR 2<br>
         P5 → BR 3<br>
-        P6 → BR 4 (Fer)<br>
+        P6 → BR 4<br>
         P7 → BR 5
     </div>
 
@@ -135,15 +138,45 @@
             };
         }
 
+        function updatePeople() {
+            const checkboxes = document.querySelectorAll('#personForm input[type="checkbox"]');
+            const overrideSelect = document.getElementById('overridePerson');
+            names = [];
+            overrideSelect.innerHTML = '';
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    names.push(cb.value);
+                    const opt = document.createElement('option');
+                    opt.value = cb.value;
+                    opt.textContent = cb.value;
+                    overrideSelect.appendChild(opt);
+                }
+            });
+
+            const now = new Date();
+            const currentWeek = getWeekNumber(now);
+            const fullRotation = ["P1", "P2", "P3", "P4", "P5", "P6", "P7"];
+            const assigned = fullRotation[(currentWeek - baseWeek) % fullRotation.length];
+
+            if (names.includes(assigned)) {
+                overrideSelect.value = assigned;
+            }
+
+            drawCircle();
+        }
+
+        document.querySelectorAll('#personForm input[type="checkbox"]').forEach(cb => {
+            cb.addEventListener('change', updatePeople);
+        });
+
         function drawCircle() {
             const container = document.getElementById('circle');
             container.innerHTML = '';
             const radius = container.offsetWidth / 2 - 30;
             const center = container.offsetWidth / 2;
             const now = new Date();
-            const currentWeek = getWeekNumber(now);
-            const index = (currentWeek - baseWeek) % names.length;
             const weekRange = getWeekRange(now);
+            const selectedPerson = document.getElementById('overridePerson')?.value;
 
             names.forEach((name, i) => {
                 const angle = (2 * Math.PI * i) / names.length;
@@ -151,13 +184,13 @@
                 const y = center + radius * Math.sin(angle);
 
                 const div = document.createElement('div');
-                div.className = 'person' + (i === index ? ' highlight' : '');
+                div.className = 'person' + (name === selectedPerson ? ' highlight' : '');
                 div.style.left = `${x}px`;
                 div.style.top = `${y}px`;
                 div.textContent = name;
                 container.appendChild(div);
 
-                if (i === index) {
+                if (name === selectedPerson) {
                     const dateLabel = document.createElement('div');
                     dateLabel.className = 'date-label';
                     dateLabel.style.left = `${x}px`;
@@ -168,16 +201,8 @@
             });
         }
 
-        function setPersonCount(count) {
-            names = [];
-            for (let i = 1; i <= count; i++) {
-                names.push(`P${i}`);
-            }
-            drawCircle();
-        }
-
         window.addEventListener('resize', drawCircle);
-        drawCircle();
+        updatePeople();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
